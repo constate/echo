@@ -1,38 +1,345 @@
-.App {
+/* css reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/******************  on CSS *******************/
+
+/* header */
+#header {
+  /* box-sizing: border-box; */
   text-align: center;
+  height: 140px;
+  /* border: 1px solid black; */
+  padding: 10px 20px 10px 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#logo {
+  font-size: 50px;
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#user_log {
+  margin-top: 10px;
+  font-size: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+#input_id,
+#input_password {
+  width: 150px;
+  height: 30px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+#input_id {
+  margin-right: 5px;
+}
+
+#input_password {
+  margin-left: 5px;
+}
+
+.login_btn {
+  width: 150px;
+  height: 30px;
+}
+
+.google_login {
+  margin-right: 5px;
+}
+
+.email_login {
+  margin-left: 5px;
+}
+
+/* input section */
+#input_section {
+  /* margin-bottom: 20px; */
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 250px 250px;
+  gap: 10px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 340px;
+}
+
+#input_area {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding-top: 20px;
+  background: rgb(238, 174, 202);
+  border-radius: 20px;
+  width: 250px;
+  text-align: center;
+  height: 300px;
+}
+
+#input_file_area {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+#input_file_area > label {
+  position: relative;
+  top: 120px;
+}
+
+#preview_echo {
+  box-sizing: border-box;
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+#input_echo {
+  box-sizing: border-box;
+  border-radius: 20px;
+  border: none;
+  text-align: center;
+  margin-bottom: 10px;
+  width: 200px;
+  height: 20px;
+}
+
+#input_echo_btn {
+  box-sizing: border-box;
+  background-color: rgb(43, 91, 145);
+  border: none;
   color: white;
+  border-radius: 0 0 20px 20px;
+  width: 250px;
+  height: 40px;
 }
 
-.App-link {
-  color: #61dafb;
+#user_area {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding-top: 20px;
+  background: rgb(148, 187, 233);
+  border-radius: 20px;
+  width: 250px;
+  text-align: center;
+  height: 300px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* best echo section */
+#best_echo_title {
+  text-align: center;
+  font-size: 30px;
+}
+
+#best_echo_section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 10px 50px 30px 50px;
+  margin-bottom: 30px;
+}
+
+.best_echo_grid {
+  /* box-sizing: border-box; */
+  position: relative;
+  /* border: 1px none silver; */
+  margin: 0 auto;
+  margin: 10px 10px;
+  background: white;
+  border-radius: 20px;
+  width: 300px;
+  height: 400px;
+  box-shadow: 0 0 3px silver;
+}
+
+.best_echo_grid:hover {
+  box-shadow: 0 0 10px silver;
+  top: -2px;
+}
+
+.best_echo_img_area {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.best_echo_img_area > img {
+  max-width: 300px;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+
+.echo {
+  height: 70px;
+  padding: 0 10px;
+}
+
+.best_echo_content {
+  height: 100px;
+}
+
+.best_echo_like_area {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(247, 248, 249, 1) 100%
+  );
+  border-radius: 0px 0px 20px 20px;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  align-items: center;
+}
+
+.like_Btn_off {
+  z-index: 1000;
+  cursor: pointer;
+}
+
+/* echo section */
+#echo_section {
+  background-color: wheat;
+  padding: 30px;
+}
+
+.echo_grid {
+  box-sizing: border-box;
+  /* margin: 0 auto; */
+  padding-top: 20px;
+  background: rgb(238, 174, 202);
+  border-radius: 20px;
+  width: 300px;
+  text-align: center;
+  height: 400px;
 }
